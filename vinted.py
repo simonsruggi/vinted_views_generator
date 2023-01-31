@@ -4,7 +4,7 @@ print('Please input Vinted link')
 
 vinted_link = input()
 
-if 'vinted.com' not in vinted_link:
+if 'vinted' not in vinted_link:
 
     print('Invalid vinted link')
 
@@ -131,5 +131,5 @@ def runthreads():
             pass
 
 if __name__ == "__main__":
-    
+
     runthreads()
