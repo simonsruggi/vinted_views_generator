@@ -1,4 +1,4 @@
-# vinted_views_generator
+# Instructions
 
 # How to run?
 1) Install python 3
