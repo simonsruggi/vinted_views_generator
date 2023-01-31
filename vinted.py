@@ -108,9 +108,13 @@ class vinted():
 
                 time.sleep(2)
 
-for i in range(0, threads):
-    try:
-        threading.Thread(target = vinted.main, args=[i,]).start()
-    except:
-        time.sleep(1)
-        pass
+def runthreads():
+
+    for i in range(0, threads):
+        try:
+            threading.Thread(target = vinted.main, args=[i,]).start()
+        except:
+            time.sleep(1)
+            pass
+
+runthreads()
