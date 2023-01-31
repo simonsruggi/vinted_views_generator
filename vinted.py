@@ -1,14 +1,27 @@
-import threading, requests, time, random, os
+import threading, requests, time, random, os, sys
 
 print('Please input Vinted link')
 
 vinted_link = input()
 
+if 'vinted.com' not in vinted_link:
+
+    print('Invalid vinted link')
+
+    sys.exit()
+
 lock = threading.Lock()
 
 print('How many threads do you want to run?')
 
-threads = int(input())
+try:
+
+    threads = int(input())
+except:
+
+    print('Invalid threads number')
+
+    sys.exit()
 
 ctr = 0
 
@@ -117,4 +130,6 @@ def runthreads():
             time.sleep(1)
             pass
 
-runthreads()
+if __name__ == "__main__":
+    
+    runthreads()
